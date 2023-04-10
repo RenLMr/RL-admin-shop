@@ -4,14 +4,14 @@
   </div>
 </template>
 <script>
-import { useRouter } from "vue-router";
+import { useRouter } from "vue-router"
 export default {
   setup() {
-    const router = useRouter();
+    const router = useRouter()
     return {
-      router,
-    };
-  },
-};
+      router
+    }
+  }
+}
 </script>
 <style lang=""></style>

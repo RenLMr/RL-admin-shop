@@ -1,28 +1,28 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    redirect: "/login",
+    redirect: "/login"
   },
   {
     path: "/login",
-    component: () => import("../views/login.vue"),
+    component: () => import("../views/login.vue")
   },
   {
     path: "/about",
-    component: () => import("../views/about.vue"),
+    component: () => import("../views/about.vue")
   },
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
-    component: () => import("../views/404.vue"),
-  },
-];
+    component: () => import("../views/404.vue")
+  }
+]
 
 const router = createRouter({
   routes,
-  history: createWebHistory(),
-});
+  history: createWebHistory()
+})
 
-export default router;
+export default router

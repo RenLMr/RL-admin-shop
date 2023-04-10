@@ -16,7 +16,7 @@ import {
   Edit,
   Message,
   Search,
-  Star,
-} from "@element-plus/icons-vue";
+  Star
+} from "@element-plus/icons-vue"
 </script>
 <style lang=""></style>
