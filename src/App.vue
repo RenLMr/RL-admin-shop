@@ -1,6 +1,6 @@
 <template>
   <router-link to="/about">首页</router-link>
-  <router-link to="/login">登录6666</router-link>
+  <router-link to="/login">登录</router-link>
   <router-view></router-view>
 </template>
 
