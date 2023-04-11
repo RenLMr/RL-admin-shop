@@ -1,4 +1,5 @@
 import axios from "axios"
+import { useCookies } from "@vueuse/integrations/useCookies"
 
 const $axios = axios.create({
   baseURL: "/api",
@@ -6,6 +7,10 @@ const $axios = axios.create({
 })
 
 $axios.interceptors.request.use((config) => {
+  const cookies = useCookies()
+  if (cookies.get("admin-token")) {
+    config.headers.token = cookies.get("admin-token")
+  }
   return config
 })
 

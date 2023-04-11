@@ -74,7 +74,7 @@ import { useRouter } from "vue-router"
 import { reactive, ref } from "vue"
 import type { FormInstance, FormRules } from "element-plus"
 import { loginApi } from "@/uilts/api"
-// import { ElNotification } from "element-plus"
+import { ElNotification } from "element-plus"
 const router = useRouter()
 let ruleForm = reactive({
   username: "",
@@ -91,11 +91,10 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     if (valid) {
       loginApi({ ...ruleForm }).then((res) => {
         console.log(res)
-        // ElNotification({
-        //   title: "Success",
-        //   message: "登录成功",
-        //   type: "success"
-        // })
+        ElNotification({
+          title: "登录成功",
+          type: "success"
+        })
         //存储Cookies
         const Cookies = useCookies()
         Cookies.set("admin-token", res.data.data.token)
